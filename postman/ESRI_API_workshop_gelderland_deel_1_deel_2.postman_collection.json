@@ -6,841 +6,851 @@
 	},
 	"item": [
 		{
-			"name": "Landbouw REST API ",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://gisserver.gelderland.nl/services/rest/services/Landbouw/Lb_Veehouderij_emissiepunt/MapServer/0/query?where=1=1&outFields=*&f=geojson",
-					"protocol": "https",
-					"host": [
-						"gisserver",
-						"gelderland",
-						"nl"
-					],
-					"path": [
-						"services",
-						"rest",
-						"services",
-						"Landbouw",
-						"Lb_Veehouderij_emissiepunt",
-						"MapServer",
-						"0",
-						"query"
-					],
-					"query": [
-						{
-							"key": "where",
-							"value": "1=1"
+			"name": "Landbouw",
+			"item": [
+				{
+					"name": "Landbouw REST API ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gisserver.gelderland.nl/services/rest/services/Landbouw/Lb_Veehouderij_emissiepunt/MapServer/0/query?where=1=1&outFields=*&f=geojson",
+							"protocol": "https",
+							"host": [
+								"gisserver",
+								"gelderland",
+								"nl"
+							],
+							"path": [
+								"services",
+								"rest",
+								"services",
+								"Landbouw",
+								"Lb_Veehouderij_emissiepunt",
+								"MapServer",
+								"0",
+								"query"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "1=1"
+								},
+								{
+									"key": "outFields",
+									"value": "*"
+								},
+								{
+									"key": "f",
+									"value": "geojson"
+								},
+								{
+									"key": "geometryPrecision",
+									"value": "5",
+									"disabled": true
+								}
+							]
 						},
-						{
-							"key": "outFields",
-							"value": "*"
-						},
-						{
-							"key": "f",
-							"value": "geojson"
-						},
-						{
-							"key": "geometryPrecision",
-							"value": "5",
-							"disabled": true
-						}
-					]
+						"description": "Request geojson van landbouw data"
+					},
+					"response": []
 				},
-				"description": "Request geojson van landbouw data"
-			},
-			"response": []
-		},
-		{
-			"name": "Landbouw REST API  informatie pe stal",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://gisserver.gelderland.nl/services/rest/services/Landbouw/Lb_Veehouderij_emissiepunt/MapServer/0/query?where=1=1&outFields=ravtabel_org,omschrijving_stalsysteem,dieraantal,nh3_factor,nge_factor&f=pjson&returnGeometry=false",
-					"protocol": "https",
-					"host": [
-						"gisserver",
-						"gelderland",
-						"nl"
-					],
-					"path": [
-						"services",
-						"rest",
-						"services",
-						"Landbouw",
-						"Lb_Veehouderij_emissiepunt",
-						"MapServer",
-						"0",
-						"query"
-					],
-					"query": [
-						{
-							"key": "where",
-							"value": "1=1"
+				{
+					"name": "Alle informatie per stal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gisserver.gelderland.nl/services/rest/services/Landbouw/Lb_Veehouderij_emissiepunt/MapServer/0/query?where=1=1&outFields=ravtabel_org,omschrijving_stalsysteem,dieraantal,nh3_factor,nge_factor&f=pjson&returnGeometry=false",
+							"protocol": "https",
+							"host": [
+								"gisserver",
+								"gelderland",
+								"nl"
+							],
+							"path": [
+								"services",
+								"rest",
+								"services",
+								"Landbouw",
+								"Lb_Veehouderij_emissiepunt",
+								"MapServer",
+								"0",
+								"query"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "1=1"
+								},
+								{
+									"key": "outFields",
+									"value": "ravtabel_org,omschrijving_stalsysteem,dieraantal,nh3_factor,nge_factor"
+								},
+								{
+									"key": "f",
+									"value": "pjson"
+								},
+								{
+									"key": "returnGeometry",
+									"value": "false"
+								}
+							]
 						},
-						{
-							"key": "outFields",
-							"value": "ravtabel_org,omschrijving_stalsysteem,dieraantal,nh3_factor,nge_factor"
-						},
-						{
-							"key": "f",
-							"value": "pjson"
-						},
-						{
-							"key": "returnGeometry",
-							"value": "false"
-						}
-					]
+						"description": "Request geojson van landbouw data"
+					},
+					"response": []
 				},
-				"description": "Request geojson van landbouw data"
-			},
-			"response": []
-		},
-		{
-			"name": "Landbouw REST API Veel dieren!",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://gisserver.gelderland.nl/services/rest/services/Landbouw/Lb_Veehouderij_emissiepunt/MapServer/0/query?where=dieraantal > 10000&outFields=ravcode_orig,omschrijving_stalsysteem,dieraantal,nh3_factor,nge_factor&f=pjson&returnGeometry=false",
-					"protocol": "https",
-					"host": [
-						"gisserver",
-						"gelderland",
-						"nl"
-					],
-					"path": [
-						"services",
-						"rest",
-						"services",
-						"Landbouw",
-						"Lb_Veehouderij_emissiepunt",
-						"MapServer",
-						"0",
-						"query"
-					],
-					"query": [
-						{
-							"key": "where",
-							"value": "dieraantal > 10000"
+				{
+					"name": "Veel dieren!",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gisserver.gelderland.nl/services/rest/services/Landbouw/Lb_Veehouderij_emissiepunt/MapServer/0/query?where=dieraantal > 10000&outFields=ravcode_orig,omschrijving_stalsysteem,dieraantal,nh3_factor,nge_factor&f=pjson&returnGeometry=false",
+							"protocol": "https",
+							"host": [
+								"gisserver",
+								"gelderland",
+								"nl"
+							],
+							"path": [
+								"services",
+								"rest",
+								"services",
+								"Landbouw",
+								"Lb_Veehouderij_emissiepunt",
+								"MapServer",
+								"0",
+								"query"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "dieraantal > 10000"
+								},
+								{
+									"key": "outFields",
+									"value": "ravcode_orig,omschrijving_stalsysteem,dieraantal,nh3_factor,nge_factor"
+								},
+								{
+									"key": "f",
+									"value": "pjson"
+								},
+								{
+									"key": "returnGeometry",
+									"value": "false"
+								}
+							]
 						},
-						{
-							"key": "outFields",
-							"value": "ravcode_orig,omschrijving_stalsysteem,dieraantal,nh3_factor,nge_factor"
-						},
-						{
-							"key": "f",
-							"value": "pjson"
-						},
-						{
-							"key": "returnGeometry",
-							"value": "false"
-						}
-					]
+						"description": "Request geojson van landbouw data"
+					},
+					"response": []
 				},
-				"description": "Request geojson van landbouw data"
-			},
-			"response": []
-		},
-		{
-			"name": "Landbouw REST API Grootste stal",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://gisserver.gelderland.nl/services/rest/services/Landbouw/Lb_Veehouderij_emissiepunt/MapServer/0/query?where=1=1&f=pjson&outFields=gemeente,plaats,dieraantal,ravcode_orig,omschrijving_stalsysteem&returnGeometry=false&orderByFields=dieraantal DESC&resultRecordCount=3",
-					"protocol": "https",
-					"host": [
-						"gisserver",
-						"gelderland",
-						"nl"
-					],
-					"path": [
-						"services",
-						"rest",
-						"services",
-						"Landbouw",
-						"Lb_Veehouderij_emissiepunt",
-						"MapServer",
-						"0",
-						"query"
-					],
-					"query": [
-						{
-							"key": "where",
-							"value": "1=1"
+				{
+					"name": "Meeste dieren in een stal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gisserver.gelderland.nl/services/rest/services/Landbouw/Lb_Veehouderij_emissiepunt/MapServer/0/query?where=1=1&f=pjson&outFields=gemeente,plaats,dieraantal,ravcode_orig,omschrijving_stalsysteem&returnGeometry=false&orderByFields=dieraantal DESC&resultRecordCount=3",
+							"protocol": "https",
+							"host": [
+								"gisserver",
+								"gelderland",
+								"nl"
+							],
+							"path": [
+								"services",
+								"rest",
+								"services",
+								"Landbouw",
+								"Lb_Veehouderij_emissiepunt",
+								"MapServer",
+								"0",
+								"query"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "1=1"
+								},
+								{
+									"key": "f",
+									"value": "pjson"
+								},
+								{
+									"key": "outFields",
+									"value": "gemeente,plaats,dieraantal,ravcode_orig,omschrijving_stalsysteem"
+								},
+								{
+									"key": "returnGeometry",
+									"value": "false"
+								},
+								{
+									"key": "orderByFields",
+									"value": "dieraantal DESC"
+								},
+								{
+									"key": "resultRecordCount",
+									"value": "3"
+								}
+							]
 						},
-						{
-							"key": "f",
-							"value": "pjson"
-						},
-						{
-							"key": "outFields",
-							"value": "gemeente,plaats,dieraantal,ravcode_orig,omschrijving_stalsysteem"
-						},
-						{
-							"key": "returnGeometry",
-							"value": "false"
-						},
-						{
-							"key": "orderByFields",
-							"value": "dieraantal DESC"
-						},
-						{
-							"key": "resultRecordCount",
-							"value": "3"
-						}
-					]
+						"description": "Request geojson van landbouw data"
+					},
+					"response": []
 				},
-				"description": "Request geojson van landbouw data"
-			},
-			"response": []
-		},
-		{
-			"name": "Landbouw REST API Emissie",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://gisserver.gelderland.nl/services/rest/services/Landbouw/Lb_Veehouderij_emissiepunt/MapServer/0/query?where=1=1&f=pjson&outFields=gemeente,plaats,ravcode_orig,dieraantal,fijnstofem_factor,omschrijving_stalsysteem&returnGeometry=false&orderByFields=dieraantal * fijnstofem_factor DESC&resultRecordCount=3",
-					"protocol": "https",
-					"host": [
-						"gisserver",
-						"gelderland",
-						"nl"
-					],
-					"path": [
-						"services",
-						"rest",
-						"services",
-						"Landbouw",
-						"Lb_Veehouderij_emissiepunt",
-						"MapServer",
-						"0",
-						"query"
-					],
-					"query": [
-						{
-							"key": "where",
-							"value": "1=1"
+				{
+					"name": "Emissie",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gisserver.gelderland.nl/services/rest/services/Landbouw/Lb_Veehouderij_emissiepunt/MapServer/0/query?where=1=1&f=pjson&outFields=gemeente,plaats,ravcode_orig,dieraantal,fijnstofem_factor,omschrijving_stalsysteem&returnGeometry=false&orderByFields=dieraantal * fijnstofem_factor DESC&resultRecordCount=3",
+							"protocol": "https",
+							"host": [
+								"gisserver",
+								"gelderland",
+								"nl"
+							],
+							"path": [
+								"services",
+								"rest",
+								"services",
+								"Landbouw",
+								"Lb_Veehouderij_emissiepunt",
+								"MapServer",
+								"0",
+								"query"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "1=1"
+								},
+								{
+									"key": "f",
+									"value": "pjson"
+								},
+								{
+									"key": "outFields",
+									"value": "gemeente,plaats,ravcode_orig,dieraantal,fijnstofem_factor,omschrijving_stalsysteem"
+								},
+								{
+									"key": "returnGeometry",
+									"value": "false"
+								},
+								{
+									"key": "orderByFields",
+									"value": "dieraantal * fijnstofem_factor DESC"
+								},
+								{
+									"key": "resultRecordCount",
+									"value": "3"
+								},
+								{
+									"key": "outStatistics",
+									"value": "[{\"statisticType\": \"var\",\n    \"onStatisticField\": \"dieraantal * fijnstofem_factor\",\n    \"outStatisticFieldName\": \"totaalemissie\"}]",
+									"disabled": true
+								}
+							]
 						},
-						{
-							"key": "f",
-							"value": "pjson"
-						},
-						{
-							"key": "outFields",
-							"value": "gemeente,plaats,ravcode_orig,dieraantal,fijnstofem_factor,omschrijving_stalsysteem"
-						},
-						{
-							"key": "returnGeometry",
-							"value": "false"
-						},
-						{
-							"key": "orderByFields",
-							"value": "dieraantal * fijnstofem_factor DESC"
-						},
-						{
-							"key": "resultRecordCount",
-							"value": "3"
-						},
-						{
-							"key": "outStatistics",
-							"value": "[{\"statisticType\": \"var\",\n    \"onStatisticField\": \"dieraantal * fijnstofem_factor\",\n    \"outStatisticFieldName\": \"totaalemissie\"}]",
-							"disabled": true
-						}
-					]
+						"description": "Request geojson van landbouw data"
+					},
+					"response": []
 				},
-				"description": "Request geojson van landbouw data"
-			},
-			"response": []
-		},
-		{
-			"name": "Landbouw REST API Paarden",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://gisserver.gelderland.nl/services/rest/services/Landbouw/Lb_Veehouderij_emissiepunt/MapServer/0/query?outFields=ravtabel_org,ravcode_orig,omschrijving_stalsysteem,dieraantal,nh3_factor,nge_factor&f=pjson&returnGeometry=false&where=ravcode_orig LIKE 'A%'",
-					"protocol": "https",
-					"host": [
-						"gisserver",
-						"gelderland",
-						"nl"
-					],
-					"path": [
-						"services",
-						"rest",
-						"services",
-						"Landbouw",
-						"Lb_Veehouderij_emissiepunt",
-						"MapServer",
-						"0",
-						"query"
-					],
-					"query": [
-						{
-							"key": "outFields",
-							"value": "ravtabel_org,ravcode_orig,omschrijving_stalsysteem,dieraantal,nh3_factor,nge_factor"
+				{
+					"name": "Paarden",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gisserver.gelderland.nl/services/rest/services/Landbouw/Lb_Veehouderij_emissiepunt/MapServer/0/query?outFields=ravtabel_org,ravcode_orig,omschrijving_stalsysteem,dieraantal,nh3_factor,nge_factor&f=pjson&returnGeometry=false&where=ravcode_orig LIKE 'A%'",
+							"protocol": "https",
+							"host": [
+								"gisserver",
+								"gelderland",
+								"nl"
+							],
+							"path": [
+								"services",
+								"rest",
+								"services",
+								"Landbouw",
+								"Lb_Veehouderij_emissiepunt",
+								"MapServer",
+								"0",
+								"query"
+							],
+							"query": [
+								{
+									"key": "outFields",
+									"value": "ravtabel_org,ravcode_orig,omschrijving_stalsysteem,dieraantal,nh3_factor,nge_factor"
+								},
+								{
+									"key": "f",
+									"value": "pjson"
+								},
+								{
+									"key": "returnGeometry",
+									"value": "false"
+								},
+								{
+									"key": "where",
+									"value": "ravcode_orig LIKE 'A%'"
+								},
+								{
+									"key": "searchFields",
+									"value": "ravcode_orig",
+									"disabled": true
+								},
+								{
+									"key": "contains",
+									"value": "true",
+									"disabled": true
+								}
+							]
 						},
-						{
-							"key": "f",
-							"value": "pjson"
-						},
-						{
-							"key": "returnGeometry",
-							"value": "false"
-						},
-						{
-							"key": "where",
-							"value": "ravcode_orig LIKE 'A%'"
-						},
-						{
-							"key": "searchFields",
-							"value": "ravcode_orig",
-							"disabled": true
-						},
-						{
-							"key": "contains",
-							"value": "true",
-							"disabled": true
-						}
-					]
+						"description": "Request geojson van landbouw data"
+					},
+					"response": []
 				},
-				"description": "Request geojson van landbouw data"
-			},
-			"response": []
-		},
-		{
-			"name": "Landbouw REST API totaal aantal dieren in gelderland",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://gisserver.gelderland.nl/services/rest/services/Landbouw/Lb_Veehouderij_emissiepunt/MapServer/0/query?where=ravcode_orig LIKE 'K%'&f=pjson&outStatistics=[{\"statisticType\":\"sum\",       \n                         \"onStatisticField\":\"dieraantal\",      \n                         \"outStatisticFieldName\":\"tot_aantal_pluimvee\"}]&returnGeometry=false",
-					"protocol": "https",
-					"host": [
-						"gisserver",
-						"gelderland",
-						"nl"
-					],
-					"path": [
-						"services",
-						"rest",
-						"services",
-						"Landbouw",
-						"Lb_Veehouderij_emissiepunt",
-						"MapServer",
-						"0",
-						"query"
-					],
-					"query": [
-						{
-							"key": "where",
-							"value": "ravcode_orig LIKE 'K%'"
+				{
+					"name": "Totaal aantal dieren in Gelderland",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gisserver.gelderland.nl/services/rest/services/Landbouw/Lb_Veehouderij_emissiepunt/MapServer/0/query?where=ravcode_orig LIKE 'K%'&f=pjson&outStatistics=[{\"statisticType\":\"sum\",       \n                         \"onStatisticField\":\"dieraantal\",      \n                         \"outStatisticFieldName\":\"tot_aantal_pluimvee\"}]&returnGeometry=false",
+							"protocol": "https",
+							"host": [
+								"gisserver",
+								"gelderland",
+								"nl"
+							],
+							"path": [
+								"services",
+								"rest",
+								"services",
+								"Landbouw",
+								"Lb_Veehouderij_emissiepunt",
+								"MapServer",
+								"0",
+								"query"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "ravcode_orig LIKE 'K%'"
+								},
+								{
+									"key": "f",
+									"value": "pjson"
+								},
+								{
+									"key": "outStatistics",
+									"value": "[{\"statisticType\":\"sum\",       \n                         \"onStatisticField\":\"dieraantal\",      \n                         \"outStatisticFieldName\":\"tot_aantal_pluimvee\"}]"
+								},
+								{
+									"key": "returnGeometry",
+									"value": "false"
+								}
+							]
 						},
-						{
-							"key": "f",
-							"value": "pjson"
-						},
-						{
-							"key": "outStatistics",
-							"value": "[{\"statisticType\":\"sum\",       \n                         \"onStatisticField\":\"dieraantal\",      \n                         \"outStatisticFieldName\":\"tot_aantal_pluimvee\"}]"
-						},
-						{
-							"key": "returnGeometry",
-							"value": "false"
-						}
-					]
+						"description": "Request geojson van landbouw data"
+					},
+					"response": []
 				},
-				"description": "Request geojson van landbouw data"
-			},
-			"response": []
-		},
-		{
-			"name": "Landbouw REST API Aantal dieren per gemeente",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://gisserver.gelderland.nl/services/rest/services/Landbouw/Lb_Veehouderij_emissiepunt/MapServer/0/query?where=1=1&f=pjson&outStatistics=[{\"statisticType\":\"sum\",       \n                         \"onStatisticField\":\"dieraantal\",      \n                         \"outStatisticFieldName\":\"tot_dieraantal\"}]&returnGeometry=false&groupByFieldsForStatistics=gemeente",
-					"protocol": "https",
-					"host": [
-						"gisserver",
-						"gelderland",
-						"nl"
-					],
-					"path": [
-						"services",
-						"rest",
-						"services",
-						"Landbouw",
-						"Lb_Veehouderij_emissiepunt",
-						"MapServer",
-						"0",
-						"query"
-					],
-					"query": [
-						{
-							"key": "where",
-							"value": "1=1"
+				{
+					"name": "Aantal dieren per gemeente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gisserver.gelderland.nl/services/rest/services/Landbouw/Lb_Veehouderij_emissiepunt/MapServer/0/query?where=1=1&f=pjson&outStatistics=[{\"statisticType\":\"sum\",       \n                         \"onStatisticField\":\"dieraantal\",      \n                         \"outStatisticFieldName\":\"tot_dieraantal\"}]&returnGeometry=false&groupByFieldsForStatistics=gemeente",
+							"protocol": "https",
+							"host": [
+								"gisserver",
+								"gelderland",
+								"nl"
+							],
+							"path": [
+								"services",
+								"rest",
+								"services",
+								"Landbouw",
+								"Lb_Veehouderij_emissiepunt",
+								"MapServer",
+								"0",
+								"query"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "1=1"
+								},
+								{
+									"key": "f",
+									"value": "pjson"
+								},
+								{
+									"key": "outStatistics",
+									"value": "[{\"statisticType\":\"sum\",       \n                         \"onStatisticField\":\"dieraantal\",      \n                         \"outStatisticFieldName\":\"tot_dieraantal\"}]"
+								},
+								{
+									"key": "returnGeometry",
+									"value": "false"
+								},
+								{
+									"key": "groupByFieldsForStatistics",
+									"value": "gemeente"
+								}
+							]
 						},
-						{
-							"key": "f",
-							"value": "pjson"
-						},
-						{
-							"key": "outStatistics",
-							"value": "[{\"statisticType\":\"sum\",       \n                         \"onStatisticField\":\"dieraantal\",      \n                         \"outStatisticFieldName\":\"tot_dieraantal\"}]"
-						},
-						{
-							"key": "returnGeometry",
-							"value": "false"
-						},
-						{
-							"key": "groupByFieldsForStatistics",
-							"value": "gemeente"
-						}
-					]
-				},
-				"description": "Request geojson van landbouw data"
-			},
-			"response": []
+						"description": "Request geojson van landbouw data"
+					},
+					"response": []
+				}
+			]
 		},
 		{
 			"name": "Ongevallen Archief",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://gisserver.gelderland.nl/services/rest/services/Infra/InVkMo_Ongevallen_Archief/MapServer/0/query?where=1=1&outFields=*&returnGeometry=false&f=pjson",
-					"protocol": "https",
-					"host": [
-						"gisserver",
-						"gelderland",
-						"nl"
-					],
-					"path": [
-						"services",
-						"rest",
-						"services",
-						"Infra",
-						"InVkMo_Ongevallen_Archief",
-						"MapServer",
-						"0",
-						"query"
-					],
-					"query": [
-						{
-							"key": "where",
-							"value": "1=1"
-						},
-						{
-							"key": "outFields",
-							"value": "*"
-						},
-						{
-							"key": "returnGeometry",
-							"value": "false"
-						},
-						{
-							"key": "f",
-							"value": "pjson"
+			"item": [
+				{
+					"name": "Ongevallen Archief",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gisserver.gelderland.nl/services/rest/services/Infra/InVkMo_Ongevallen_Archief/MapServer/0/query?where=1=1&outFields=*&returnGeometry=false&f=pjson",
+							"protocol": "https",
+							"host": [
+								"gisserver",
+								"gelderland",
+								"nl"
+							],
+							"path": [
+								"services",
+								"rest",
+								"services",
+								"Infra",
+								"InVkMo_Ongevallen_Archief",
+								"MapServer",
+								"0",
+								"query"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "1=1"
+								},
+								{
+									"key": "outFields",
+									"value": "*"
+								},
+								{
+									"key": "returnGeometry",
+									"value": "false"
+								},
+								{
+									"key": "f",
+									"value": "pjson"
+								}
+							]
 						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Ongevallen totaal",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://gisserver.gelderland.nl/services/rest/services/Infra/InVkMo_Ongevallen_Archief/MapServer/0/query?where=1=1&returnCountOnly=true&f=pjson",
-					"protocol": "https",
-					"host": [
-						"gisserver",
-						"gelderland",
-						"nl"
-					],
-					"path": [
-						"services",
-						"rest",
-						"services",
-						"Infra",
-						"InVkMo_Ongevallen_Archief",
-						"MapServer",
-						"0",
-						"query"
-					],
-					"query": [
-						{
-							"key": "where",
-							"value": "1=1"
-						},
-						{
-							"key": "returnCountOnly",
-							"value": "true"
-						},
-						{
-							"key": "f",
-							"value": "pjson"
+					},
+					"response": []
+				},
+				{
+					"name": "Ongevallen totaal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gisserver.gelderland.nl/services/rest/services/Infra/InVkMo_Ongevallen_Archief/MapServer/0/query?where=1=1&returnCountOnly=true&f=pjson",
+							"protocol": "https",
+							"host": [
+								"gisserver",
+								"gelderland",
+								"nl"
+							],
+							"path": [
+								"services",
+								"rest",
+								"services",
+								"Infra",
+								"InVkMo_Ongevallen_Archief",
+								"MapServer",
+								"0",
+								"query"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "1=1"
+								},
+								{
+									"key": "returnCountOnly",
+									"value": "true"
+								},
+								{
+									"key": "f",
+									"value": "pjson"
+								}
+							]
 						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Ongevallen Paginering",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://gisserver.gelderland.nl/services/rest/services/Infra/InVkMo_Ongevallen_Archief/MapServer/0/query?where=1=1&f=pjson&outFields=*&returnGeometry=false&orderByFields=OBJECTID&resultOffset=1000&recordCount=1000",
-					"protocol": "https",
-					"host": [
-						"gisserver",
-						"gelderland",
-						"nl"
-					],
-					"path": [
-						"services",
-						"rest",
-						"services",
-						"Infra",
-						"InVkMo_Ongevallen_Archief",
-						"MapServer",
-						"0",
-						"query"
-					],
-					"query": [
-						{
-							"key": "where",
-							"value": "1=1"
-						},
-						{
-							"key": "returnCountOnly",
-							"value": "true",
-							"disabled": true
-						},
-						{
-							"key": "f",
-							"value": "pjson"
-						},
-						{
-							"key": "outFields",
-							"value": "*"
-						},
-						{
-							"key": "returnGeometry",
-							"value": "false"
-						},
-						{
-							"key": "orderByFields",
-							"value": "OBJECTID"
-						},
-						{
-							"key": "resultOffset",
-							"value": "1000"
-						},
-						{
-							"key": "recordCount",
-							"value": "1000"
+					},
+					"response": []
+				},
+				{
+					"name": "Ongevallen Paginering",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gisserver.gelderland.nl/services/rest/services/Infra/InVkMo_Ongevallen_Archief/MapServer/0/query?where=1=1&f=pjson&outFields=*&returnGeometry=false&orderByFields=OBJECTID&resultOffset=1000&recordCount=1000",
+							"protocol": "https",
+							"host": [
+								"gisserver",
+								"gelderland",
+								"nl"
+							],
+							"path": [
+								"services",
+								"rest",
+								"services",
+								"Infra",
+								"InVkMo_Ongevallen_Archief",
+								"MapServer",
+								"0",
+								"query"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "1=1"
+								},
+								{
+									"key": "returnCountOnly",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "f",
+									"value": "pjson"
+								},
+								{
+									"key": "outFields",
+									"value": "*"
+								},
+								{
+									"key": "returnGeometry",
+									"value": "false"
+								},
+								{
+									"key": "orderByFields",
+									"value": "OBJECTID"
+								},
+								{
+									"key": "resultOffset",
+									"value": "1000"
+								},
+								{
+									"key": "recordCount",
+									"value": "1000"
+								}
+							]
 						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Ongevallen eerste laatste",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://gisserver.gelderland.nl/services/rest/services/Infra/InVkMo_Ongevallen_Archief/MapServer/0/query?where=1=1&f=pjson&outStatistics=[{\"statisticType\":\"max\", \n                         \"onStatisticField\":\"datum\", \n                         \"outStatisticFieldName\":\"laatste\"},\n                        {\"statisticType\":\"min\", \n                         \"onStatisticField\":\"datum\", \n                         \"outStatisticFieldName\":\"eerste\"}]",
-					"protocol": "https",
-					"host": [
-						"gisserver",
-						"gelderland",
-						"nl"
-					],
-					"path": [
-						"services",
-						"rest",
-						"services",
-						"Infra",
-						"InVkMo_Ongevallen_Archief",
-						"MapServer",
-						"0",
-						"query"
-					],
-					"query": [
-						{
-							"key": "where",
-							"value": "1=1"
-						},
-						{
-							"key": "returnCountOnly",
-							"value": "true",
-							"disabled": true
-						},
-						{
-							"key": "f",
-							"value": "pjson"
-						},
-						{
-							"key": "outStatistics",
-							"value": "[{\"statisticType\":\"max\", \n                         \"onStatisticField\":\"datum\", \n                         \"outStatisticFieldName\":\"laatste\"},\n                        {\"statisticType\":\"min\", \n                         \"onStatisticField\":\"datum\", \n                         \"outStatisticFieldName\":\"eerste\"}]"
+					},
+					"response": []
+				},
+				{
+					"name": "Ongevallen eerste laatste",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gisserver.gelderland.nl/services/rest/services/Infra/InVkMo_Ongevallen_Archief/MapServer/0/query?where=1=1&f=pjson&outStatistics=[{\"statisticType\":\"max\", \n                         \"onStatisticField\":\"datum\", \n                         \"outStatisticFieldName\":\"laatste\"},\n                        {\"statisticType\":\"min\", \n                         \"onStatisticField\":\"datum\", \n                         \"outStatisticFieldName\":\"eerste\"}]",
+							"protocol": "https",
+							"host": [
+								"gisserver",
+								"gelderland",
+								"nl"
+							],
+							"path": [
+								"services",
+								"rest",
+								"services",
+								"Infra",
+								"InVkMo_Ongevallen_Archief",
+								"MapServer",
+								"0",
+								"query"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "1=1"
+								},
+								{
+									"key": "returnCountOnly",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "f",
+									"value": "pjson"
+								},
+								{
+									"key": "outStatistics",
+									"value": "[{\"statisticType\":\"max\", \n                         \"onStatisticField\":\"datum\", \n                         \"outStatisticFieldName\":\"laatste\"},\n                        {\"statisticType\":\"min\", \n                         \"onStatisticField\":\"datum\", \n                         \"outStatisticFieldName\":\"eerste\"}]"
+								}
+							]
 						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Ongevallen per gemeente",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://gisserver.gelderland.nl/services/rest/services/Infra/InVkMo_Ongevallen_Archief/MapServer/0/query?where=1=1&f=pjson&outStatistics= [{\"statisticType\":\"sum\",       \n                                 \"onStatisticField\":\"slachtoffers\",      \n                                 \"outStatisticFieldName\":\"aantal_slachtoffers\"}]&groupByFieldsForStatistics=gemeente",
-					"protocol": "https",
-					"host": [
-						"gisserver",
-						"gelderland",
-						"nl"
-					],
-					"path": [
-						"services",
-						"rest",
-						"services",
-						"Infra",
-						"InVkMo_Ongevallen_Archief",
-						"MapServer",
-						"0",
-						"query"
-					],
-					"query": [
-						{
-							"key": "where",
-							"value": "1=1"
-						},
-						{
-							"key": "returnCountOnly",
-							"value": "true",
-							"disabled": true
-						},
-						{
-							"key": "f",
-							"value": "pjson"
-						},
-						{
-							"key": "outStatistics",
-							"value": " [{\"statisticType\":\"sum\",       \n                                 \"onStatisticField\":\"slachtoffers\",      \n                                 \"outStatisticFieldName\":\"aantal_slachtoffers\"}]"
-						},
-						{
-							"key": "groupByFieldsForStatistics",
-							"value": "gemeente"
+					},
+					"response": []
+				},
+				{
+					"name": "Ongevallen per gemeente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gisserver.gelderland.nl/services/rest/services/Infra/InVkMo_Ongevallen_Archief/MapServer/0/query?where=1=1&f=pjson&outStatistics= [{\"statisticType\":\"sum\",       \n                                 \"onStatisticField\":\"slachtoffers\",      \n                                 \"outStatisticFieldName\":\"aantal_slachtoffers\"}]&groupByFieldsForStatistics=gemeente",
+							"protocol": "https",
+							"host": [
+								"gisserver",
+								"gelderland",
+								"nl"
+							],
+							"path": [
+								"services",
+								"rest",
+								"services",
+								"Infra",
+								"InVkMo_Ongevallen_Archief",
+								"MapServer",
+								"0",
+								"query"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "1=1"
+								},
+								{
+									"key": "returnCountOnly",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "f",
+									"value": "pjson"
+								},
+								{
+									"key": "outStatistics",
+									"value": " [{\"statisticType\":\"sum\",       \n                                 \"onStatisticField\":\"slachtoffers\",      \n                                 \"outStatisticFieldName\":\"aantal_slachtoffers\"}]"
+								},
+								{
+									"key": "groupByFieldsForStatistics",
+									"value": "gemeente"
+								}
+							]
 						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Ongevallen per dag van de week",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://gisserver.gelderland.nl/services/rest/services/Infra/InVkMo_Ongevallen_Archief/MapServer/0/query?where=doden >0 &f=pjson&outStatistics= [{\"statisticType\":\"sum\",       \n                                 \"onStatisticField\":\"slachtoffers\",      \n                                 \"outStatisticFieldName\":\"aantal_slachtoffers\"}]&groupByFieldsForStatistics=dag",
-					"protocol": "https",
-					"host": [
-						"gisserver",
-						"gelderland",
-						"nl"
-					],
-					"path": [
-						"services",
-						"rest",
-						"services",
-						"Infra",
-						"InVkMo_Ongevallen_Archief",
-						"MapServer",
-						"0",
-						"query"
-					],
-					"query": [
-						{
-							"key": "where",
-							"value": "doden >0 "
-						},
-						{
-							"key": "returnCountOnly",
-							"value": "true",
-							"disabled": true
-						},
-						{
-							"key": "f",
-							"value": "pjson"
-						},
-						{
-							"key": "outStatistics",
-							"value": " [{\"statisticType\":\"sum\",       \n                                 \"onStatisticField\":\"slachtoffers\",      \n                                 \"outStatisticFieldName\":\"aantal_slachtoffers\"}]"
-						},
-						{
-							"key": "groupByFieldsForStatistics",
-							"value": "dag"
+					},
+					"response": []
+				},
+				{
+					"name": "Ongevallen per dag van de week",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gisserver.gelderland.nl/services/rest/services/Infra/InVkMo_Ongevallen_Archief/MapServer/0/query?where=doden >0 &f=pjson&outStatistics= [{\"statisticType\":\"sum\",       \n                                 \"onStatisticField\":\"slachtoffers\",      \n                                 \"outStatisticFieldName\":\"aantal_slachtoffers\"}]&groupByFieldsForStatistics=dag",
+							"protocol": "https",
+							"host": [
+								"gisserver",
+								"gelderland",
+								"nl"
+							],
+							"path": [
+								"services",
+								"rest",
+								"services",
+								"Infra",
+								"InVkMo_Ongevallen_Archief",
+								"MapServer",
+								"0",
+								"query"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "doden >0 "
+								},
+								{
+									"key": "returnCountOnly",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "f",
+									"value": "pjson"
+								},
+								{
+									"key": "outStatistics",
+									"value": " [{\"statisticType\":\"sum\",       \n                                 \"onStatisticField\":\"slachtoffers\",      \n                                 \"outStatisticFieldName\":\"aantal_slachtoffers\"}]"
+								},
+								{
+									"key": "groupByFieldsForStatistics",
+									"value": "dag"
+								}
+							]
 						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Ongevallen provinciehuis",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://gisserver.gelderland.nl/services/rest/services/Infra/InVkMo_Ongevallen_Archief/MapServer/0/query?where=1=1&geometryType=esriGeometryPoint&f=geojson&geometryPrecision=4&geometry=5.9098, 51.9771&inSR=4326&distance=1000&units=esriSRUnit_Meter",
-					"protocol": "https",
-					"host": [
-						"gisserver",
-						"gelderland",
-						"nl"
-					],
-					"path": [
-						"services",
-						"rest",
-						"services",
-						"Infra",
-						"InVkMo_Ongevallen_Archief",
-						"MapServer",
-						"0",
-						"query"
-					],
-					"query": [
-						{
-							"key": "where",
-							"value": "1=1"
-						},
-						{
-							"key": "geometryType",
-							"value": "esriGeometryPoint"
-						},
-						{
-							"key": "f",
-							"value": "geojson"
-						},
-						{
-							"key": "geometryPrecision",
-							"value": "4"
-						},
-						{
-							"key": "geometry",
-							"value": "5.9098, 51.9771"
-						},
-						{
-							"key": "inSR",
-							"value": "4326"
-						},
-						{
-							"key": "distance",
-							"value": "1000"
-						},
-						{
-							"key": "units",
-							"value": "esriSRUnit_Meter"
+					},
+					"response": []
+				},
+				{
+					"name": "Ongevallen gevaarlijke weg..",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gisserver.gelderland.nl/services/rest/services/Infra/InVkMo_Ongevallen_Archief/MapServer/0/query?where=straatnaam IS NOT null &geometryType=esriGeometryPoint&f=geojson&geometryPrecision=4&geometry=5.9098, 51.9771&inSR=4326&distance=5000&units=esriSRUnit_Meter&outStatistics= [{\"statisticType\":\"sum\",       \n                                 \"onStatisticField\":\"slachtoffers\",      \n                                 \"outStatisticFieldName\":\"aantal_slachtoffers\"}]&groupByFieldsForStatistics=straatnaam&orderByFields=aantal_slachtoffers DESC",
+							"protocol": "https",
+							"host": [
+								"gisserver",
+								"gelderland",
+								"nl"
+							],
+							"path": [
+								"services",
+								"rest",
+								"services",
+								"Infra",
+								"InVkMo_Ongevallen_Archief",
+								"MapServer",
+								"0",
+								"query"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "straatnaam IS NOT null "
+								},
+								{
+									"key": "geometryType",
+									"value": "esriGeometryPoint"
+								},
+								{
+									"key": "f",
+									"value": "geojson"
+								},
+								{
+									"key": "geometryPrecision",
+									"value": "4"
+								},
+								{
+									"key": "geometry",
+									"value": "5.9098, 51.9771"
+								},
+								{
+									"key": "inSR",
+									"value": "4326"
+								},
+								{
+									"key": "distance",
+									"value": "5000"
+								},
+								{
+									"key": "units",
+									"value": "esriSRUnit_Meter"
+								},
+								{
+									"key": "outStatistics",
+									"value": " [{\"statisticType\":\"sum\",       \n                                 \"onStatisticField\":\"slachtoffers\",      \n                                 \"outStatisticFieldName\":\"aantal_slachtoffers\"}]"
+								},
+								{
+									"key": "groupByFieldsForStatistics",
+									"value": "straatnaam"
+								},
+								{
+									"key": "orderByFields",
+									"value": "aantal_slachtoffers DESC"
+								},
+								{
+									"key": "resultRecordCount",
+									"value": "3",
+									"disabled": true
+								}
+							]
 						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Ongevallen gevaarlijke weg..",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://gisserver.gelderland.nl/services/rest/services/Infra/InVkMo_Ongevallen_Archief/MapServer/0/query?where=straatnaam IS NOT null &geometryType=esriGeometryPoint&f=geojson&geometryPrecision=4&geometry=5.9098, 51.9771&inSR=4326&distance=5000&units=esriSRUnit_Meter&outStatistics= [{\"statisticType\":\"sum\",       \n                                 \"onStatisticField\":\"slachtoffers\",      \n                                 \"outStatisticFieldName\":\"aantal_slachtoffers\"}]&groupByFieldsForStatistics=straatnaam&orderByFields=aantal_slachtoffers DESC",
-					"protocol": "https",
-					"host": [
-						"gisserver",
-						"gelderland",
-						"nl"
-					],
-					"path": [
-						"services",
-						"rest",
-						"services",
-						"Infra",
-						"InVkMo_Ongevallen_Archief",
-						"MapServer",
-						"0",
-						"query"
-					],
-					"query": [
-						{
-							"key": "where",
-							"value": "straatnaam IS NOT null "
-						},
-						{
-							"key": "geometryType",
-							"value": "esriGeometryPoint"
-						},
-						{
-							"key": "f",
-							"value": "geojson"
-						},
-						{
-							"key": "geometryPrecision",
-							"value": "4"
-						},
-						{
-							"key": "geometry",
-							"value": "5.9098, 51.9771"
-						},
-						{
-							"key": "inSR",
-							"value": "4326"
-						},
-						{
-							"key": "distance",
-							"value": "5000"
-						},
-						{
-							"key": "units",
-							"value": "esriSRUnit_Meter"
-						},
-						{
-							"key": "outStatistics",
-							"value": " [{\"statisticType\":\"sum\",       \n                                 \"onStatisticField\":\"slachtoffers\",      \n                                 \"outStatisticFieldName\":\"aantal_slachtoffers\"}]"
-						},
-						{
-							"key": "groupByFieldsForStatistics",
-							"value": "straatnaam"
-						},
-						{
-							"key": "orderByFields",
-							"value": "aantal_slachtoffers DESC"
-						},
-						{
-							"key": "resultRecordCount",
-							"value": "3",
-							"disabled": true
+					},
+					"response": []
+				},
+				{
+					"name": "Ongevallen provinciehuis",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gisserver.gelderland.nl/services/rest/services/Infra/InVkMo_Ongevallen_Archief/MapServer/0/query?where=1=1&geometryType=esriGeometryPoint&f=geojson&geometryPrecision=4&geometry=5.9098, 51.9771&inSR=4326&distance=1000&units=esriSRUnit_Meter",
+							"protocol": "https",
+							"host": [
+								"gisserver",
+								"gelderland",
+								"nl"
+							],
+							"path": [
+								"services",
+								"rest",
+								"services",
+								"Infra",
+								"InVkMo_Ongevallen_Archief",
+								"MapServer",
+								"0",
+								"query"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "1=1"
+								},
+								{
+									"key": "geometryType",
+									"value": "esriGeometryPoint"
+								},
+								{
+									"key": "f",
+									"value": "geojson"
+								},
+								{
+									"key": "geometryPrecision",
+									"value": "4"
+								},
+								{
+									"key": "geometry",
+									"value": "5.9098, 51.9771"
+								},
+								{
+									"key": "inSR",
+									"value": "4326"
+								},
+								{
+									"key": "distance",
+									"value": "1000"
+								},
+								{
+									"key": "units",
+									"value": "esriSRUnit_Meter"
+								}
+							]
 						}
-					]
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		}
 	]
 }
