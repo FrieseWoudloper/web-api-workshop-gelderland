@@ -1,0 +1,1398 @@
+{
+	"info": {
+		"_postman_id": "4efb7cbf-ecbc-4f17-bf44-eebe855b3369",
+		"name": "API_workshop_gelderland copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Landbouw",
+			"item": [
+				{
+					"name": "Landbouw REST API ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gisserver.gelderland.nl/services/rest/services/Landbouw/Lb_Veehouderij_emissiepunt/MapServer/0/query?where=1=1&outFields=*&f=geojson&geometryPrecision=5",
+							"protocol": "https",
+							"host": [
+								"gisserver",
+								"gelderland",
+								"nl"
+							],
+							"path": [
+								"services",
+								"rest",
+								"services",
+								"Landbouw",
+								"Lb_Veehouderij_emissiepunt",
+								"MapServer",
+								"0",
+								"query"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "1=1"
+								},
+								{
+									"key": "outFields",
+									"value": "*"
+								},
+								{
+									"key": "f",
+									"value": "geojson"
+								},
+								{
+									"key": "geometryPrecision",
+									"value": "5"
+								}
+							]
+						},
+						"description": "Request geojson van landbouw data"
+					},
+					"response": []
+				},
+				{
+					"name": "Informatie per stal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gisserver.gelderland.nl/services/rest/services/Landbouw/Lb_Veehouderij_emissiepunt/MapServer/0/query?where=1=1&outFields=ravtabel_org,omschrijving_stalsysteem,dieraantal,nh3_factor,nge_factor&f=pjson&returnGeometry=false",
+							"protocol": "https",
+							"host": [
+								"gisserver",
+								"gelderland",
+								"nl"
+							],
+							"path": [
+								"services",
+								"rest",
+								"services",
+								"Landbouw",
+								"Lb_Veehouderij_emissiepunt",
+								"MapServer",
+								"0",
+								"query"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "1=1"
+								},
+								{
+									"key": "outFields",
+									"value": "ravtabel_org,omschrijving_stalsysteem,dieraantal,nh3_factor,nge_factor"
+								},
+								{
+									"key": "f",
+									"value": "pjson"
+								},
+								{
+									"key": "returnGeometry",
+									"value": "false"
+								}
+							]
+						},
+						"description": "Request geojson van landbouw data"
+					},
+					"response": []
+				},
+				{
+					"name": "Heel veel kippen en kuikens!",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gisserver.gelderland.nl/services/rest/services/Landbouw/Lb_Veehouderij_emissiepunt/MapServer/0/query?where=dieraantal > 10000&outFields=ravcode_orig,omschrijving_stalsysteem,dieraantal,nh3_factor,nge_factor&f=pjson&returnGeometry=false",
+							"protocol": "https",
+							"host": [
+								"gisserver",
+								"gelderland",
+								"nl"
+							],
+							"path": [
+								"services",
+								"rest",
+								"services",
+								"Landbouw",
+								"Lb_Veehouderij_emissiepunt",
+								"MapServer",
+								"0",
+								"query"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "dieraantal > 10000"
+								},
+								{
+									"key": "outFields",
+									"value": "ravcode_orig,omschrijving_stalsysteem,dieraantal,nh3_factor,nge_factor"
+								},
+								{
+									"key": "f",
+									"value": "pjson"
+								},
+								{
+									"key": "returnGeometry",
+									"value": "false"
+								}
+							]
+						},
+						"description": "Request geojson van landbouw data"
+					},
+					"response": []
+				},
+				{
+					"name": "Top 3 grootste stallen",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gisserver.gelderland.nl/services/rest/services/Landbouw/Lb_Veehouderij_emissiepunt/MapServer/0/query?where=1=1&f=pjson&outFields=gemeente,plaats,dieraantal,ravcode_orig,omschrijving_stalsysteem&returnGeometry=false&orderByFields=dieraantal DESC&resultRecordCount=3",
+							"protocol": "https",
+							"host": [
+								"gisserver",
+								"gelderland",
+								"nl"
+							],
+							"path": [
+								"services",
+								"rest",
+								"services",
+								"Landbouw",
+								"Lb_Veehouderij_emissiepunt",
+								"MapServer",
+								"0",
+								"query"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "1=1"
+								},
+								{
+									"key": "f",
+									"value": "pjson"
+								},
+								{
+									"key": "outFields",
+									"value": "gemeente,plaats,dieraantal,ravcode_orig,omschrijving_stalsysteem"
+								},
+								{
+									"key": "returnGeometry",
+									"value": "false"
+								},
+								{
+									"key": "orderByFields",
+									"value": "dieraantal DESC"
+								},
+								{
+									"key": "resultRecordCount",
+									"value": "3"
+								}
+							]
+						},
+						"description": "Request geojson van landbouw data"
+					},
+					"response": []
+				},
+				{
+					"name": "Top 3 Emissie",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gisserver.gelderland.nl/services/rest/services/Landbouw/Lb_Veehouderij_emissiepunt/MapServer/0/query?where=1=1&f=pjson&outFields=gemeente,plaats,ravcode_orig,dieraantal,fijnstofem_factor,omschrijving_stalsysteem&returnGeometry=false&orderByFields=dieraantal * fijnstofem_factor DESC&resultRecordCount=3",
+							"protocol": "https",
+							"host": [
+								"gisserver",
+								"gelderland",
+								"nl"
+							],
+							"path": [
+								"services",
+								"rest",
+								"services",
+								"Landbouw",
+								"Lb_Veehouderij_emissiepunt",
+								"MapServer",
+								"0",
+								"query"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "1=1"
+								},
+								{
+									"key": "f",
+									"value": "pjson"
+								},
+								{
+									"key": "outFields",
+									"value": "gemeente,plaats,ravcode_orig,dieraantal,fijnstofem_factor,omschrijving_stalsysteem"
+								},
+								{
+									"key": "returnGeometry",
+									"value": "false"
+								},
+								{
+									"key": "orderByFields",
+									"value": "dieraantal * fijnstofem_factor DESC"
+								},
+								{
+									"key": "resultRecordCount",
+									"value": "3"
+								}
+							]
+						},
+						"description": "Request geojson van landbouw data"
+					},
+					"response": []
+				},
+				{
+					"name": "Paarden",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gisserver.gelderland.nl/services/rest/services/Landbouw/Lb_Veehouderij_emissiepunt/MapServer/0/query?outFields=ravtabel_org,ravcode_orig,omschrijving_stalsysteem,dieraantal,nh3_factor,nge_factor&f=pjson&returnGeometry=false&where=ravcode_orig LIKE 'K%'",
+							"protocol": "https",
+							"host": [
+								"gisserver",
+								"gelderland",
+								"nl"
+							],
+							"path": [
+								"services",
+								"rest",
+								"services",
+								"Landbouw",
+								"Lb_Veehouderij_emissiepunt",
+								"MapServer",
+								"0",
+								"query"
+							],
+							"query": [
+								{
+									"key": "outFields",
+									"value": "ravtabel_org,ravcode_orig,omschrijving_stalsysteem,dieraantal,nh3_factor,nge_factor"
+								},
+								{
+									"key": "f",
+									"value": "pjson"
+								},
+								{
+									"key": "returnGeometry",
+									"value": "false"
+								},
+								{
+									"key": "where",
+									"value": "ravcode_orig LIKE 'K%'"
+								}
+							]
+						},
+						"description": "Request geojson van landbouw data"
+					},
+					"response": []
+				},
+				{
+					"name": "Totaal aantal paarden",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gisserver.gelderland.nl/services/rest/services/Landbouw/Lb_Veehouderij_emissiepunt/MapServer/0/query?where=ravcode_orig LIKE 'K%'&f=pjson&outStatistics=[{\"statisticType\":\"sum\",       \n                         \"onStatisticField\":\"dieraantal\",      \n                      \"outStatisticFieldName\":\"tot_aantal_PAARDEN\"}]",
+							"protocol": "https",
+							"host": [
+								"gisserver",
+								"gelderland",
+								"nl"
+							],
+							"path": [
+								"services",
+								"rest",
+								"services",
+								"Landbouw",
+								"Lb_Veehouderij_emissiepunt",
+								"MapServer",
+								"0",
+								"query"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "ravcode_orig LIKE 'K%'"
+								},
+								{
+									"key": "f",
+									"value": "pjson"
+								},
+								{
+									"key": "outStatistics",
+									"value": "[{\"statisticType\":\"sum\",       \n                         \"onStatisticField\":\"dieraantal\",      \n                      \"outStatisticFieldName\":\"tot_aantal_PAARDEN\"}]"
+								}
+							]
+						},
+						"description": "Request geojson van landbouw data"
+					},
+					"response": []
+				},
+				{
+					"name": "Paarden in RDnew",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gisserver.gelderland.nl/services/rest/services/Landbouw/Lb_Veehouderij_emissiepunt/MapServer/0/query?outFields=ravtabel_org,ravcode_orig,omschrijving_stalsysteem,dieraantal,nh3_factor,nge_factor&f=geojson&returnGeometry=true&where=ravcode_orig LIKE 'K%'&geometryPrecision=4&outSR=28992",
+							"protocol": "https",
+							"host": [
+								"gisserver",
+								"gelderland",
+								"nl"
+							],
+							"path": [
+								"services",
+								"rest",
+								"services",
+								"Landbouw",
+								"Lb_Veehouderij_emissiepunt",
+								"MapServer",
+								"0",
+								"query"
+							],
+							"query": [
+								{
+									"key": "outFields",
+									"value": "ravtabel_org,ravcode_orig,omschrijving_stalsysteem,dieraantal,nh3_factor,nge_factor"
+								},
+								{
+									"key": "f",
+									"value": "geojson"
+								},
+								{
+									"key": "returnGeometry",
+									"value": "true"
+								},
+								{
+									"key": "where",
+									"value": "ravcode_orig LIKE 'K%'"
+								},
+								{
+									"key": "geometryPrecision",
+									"value": "4"
+								},
+								{
+									"key": "outSR",
+									"value": "28992"
+								}
+							]
+						},
+						"description": "Request geojson van landbouw data"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ongevallen Archief",
+			"item": [
+				{
+					"name": "Ongevallen Archief",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gisserver.gelderland.nl/services/rest/services/Infra/InVkMo_Ongevallen_Archief/MapServer/0/query?where=1=1&outFields=*&returnGeometry=false&f=pjson&returnDistinctValues=true",
+							"protocol": "https",
+							"host": [
+								"gisserver",
+								"gelderland",
+								"nl"
+							],
+							"path": [
+								"services",
+								"rest",
+								"services",
+								"Infra",
+								"InVkMo_Ongevallen_Archief",
+								"MapServer",
+								"0",
+								"query"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "1=1"
+								},
+								{
+									"key": "outFields",
+									"value": "*"
+								},
+								{
+									"key": "returnGeometry",
+									"value": "false"
+								},
+								{
+									"key": "f",
+									"value": "pjson"
+								},
+								{
+									"key": "returnDistinctValues",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ongevallen totaal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gisserver.gelderland.nl/services/rest/services/Infra/InVkMo_Ongevallen_Archief/MapServer/0/query?where=1=1&returnCountOnly=true&f=pjson",
+							"protocol": "https",
+							"host": [
+								"gisserver",
+								"gelderland",
+								"nl"
+							],
+							"path": [
+								"services",
+								"rest",
+								"services",
+								"Infra",
+								"InVkMo_Ongevallen_Archief",
+								"MapServer",
+								"0",
+								"query"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "1=1"
+								},
+								{
+									"key": "returnCountOnly",
+									"value": "true"
+								},
+								{
+									"key": "f",
+									"value": "pjson"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ongevallen Paginering",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gisserver.gelderland.nl/services/rest/services/Infra/InVkMo_Ongevallen_Archief/MapServer/0/query?where=1=1&f=pjson&outFields=*&returnGeometry=false&orderByFields=OBJECTID&resultOffset=1000&recordCount=1000",
+							"protocol": "https",
+							"host": [
+								"gisserver",
+								"gelderland",
+								"nl"
+							],
+							"path": [
+								"services",
+								"rest",
+								"services",
+								"Infra",
+								"InVkMo_Ongevallen_Archief",
+								"MapServer",
+								"0",
+								"query"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "1=1"
+								},
+								{
+									"key": "f",
+									"value": "pjson"
+								},
+								{
+									"key": "outFields",
+									"value": "*"
+								},
+								{
+									"key": "returnGeometry",
+									"value": "false"
+								},
+								{
+									"key": "orderByFields",
+									"value": "OBJECTID"
+								},
+								{
+									"key": "resultOffset",
+									"value": "1000"
+								},
+								{
+									"key": "recordCount",
+									"value": "1000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ongevallen eerste laatste",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gisserver.gelderland.nl/services/rest/services/Infra/InVkMo_Ongevallen_Archief/MapServer/0/query?where=1=1&f=pjson&outStatistics=[{\"statisticType\":\"max\", \n                         \"onStatisticField\":\"datum\", \n                         \"outStatisticFieldName\":\"laatste\"},\n                        {\"statisticType\":\"min\", \n                         \"onStatisticField\":\"datum\", \n                         \"outStatisticFieldName\":\"eerste\"}]",
+							"protocol": "https",
+							"host": [
+								"gisserver",
+								"gelderland",
+								"nl"
+							],
+							"path": [
+								"services",
+								"rest",
+								"services",
+								"Infra",
+								"InVkMo_Ongevallen_Archief",
+								"MapServer",
+								"0",
+								"query"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "1=1"
+								},
+								{
+									"key": "f",
+									"value": "pjson"
+								},
+								{
+									"key": "outStatistics",
+									"value": "[{\"statisticType\":\"max\", \n                         \"onStatisticField\":\"datum\", \n                         \"outStatisticFieldName\":\"laatste\"},\n                        {\"statisticType\":\"min\", \n                         \"onStatisticField\":\"datum\", \n                         \"outStatisticFieldName\":\"eerste\"}]"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ongevallen per gemeente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gisserver.gelderland.nl/services/rest/services/Infra/InVkMo_Ongevallen_Archief/MapServer/0/query?where=1=1&f=pjson&outStatistics= [{\"statisticType\":\"sum\",       \n                                 \"onStatisticField\":\"slachtoffers\",      \n                                 \"outStatisticFieldName\":\"aantal_slachtoffers\"}]&groupByFieldsForStatistics=gemeente",
+							"protocol": "https",
+							"host": [
+								"gisserver",
+								"gelderland",
+								"nl"
+							],
+							"path": [
+								"services",
+								"rest",
+								"services",
+								"Infra",
+								"InVkMo_Ongevallen_Archief",
+								"MapServer",
+								"0",
+								"query"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "1=1"
+								},
+								{
+									"key": "f",
+									"value": "pjson"
+								},
+								{
+									"key": "outStatistics",
+									"value": " [{\"statisticType\":\"sum\",       \n                                 \"onStatisticField\":\"slachtoffers\",      \n                                 \"outStatisticFieldName\":\"aantal_slachtoffers\"}]"
+								},
+								{
+									"key": "groupByFieldsForStatistics",
+									"value": "gemeente"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ongevallen per dag van de week",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gisserver.gelderland.nl/services/rest/services/Infra/InVkMo_Ongevallen_Archief/MapServer/0/query?where=doden >0 &f=pjson&outStatistics= [{\"statisticType\":\"sum\",       \n                                 \"onStatisticField\":\"slachtoffers\",      \n                                 \"outStatisticFieldName\":\"aantal_slachtoffers\"}]&groupByFieldsForStatistics=dag",
+							"protocol": "https",
+							"host": [
+								"gisserver",
+								"gelderland",
+								"nl"
+							],
+							"path": [
+								"services",
+								"rest",
+								"services",
+								"Infra",
+								"InVkMo_Ongevallen_Archief",
+								"MapServer",
+								"0",
+								"query"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "doden >0 "
+								},
+								{
+									"key": "f",
+									"value": "pjson"
+								},
+								{
+									"key": "outStatistics",
+									"value": " [{\"statisticType\":\"sum\",       \n                                 \"onStatisticField\":\"slachtoffers\",      \n                                 \"outStatisticFieldName\":\"aantal_slachtoffers\"}]"
+								},
+								{
+									"key": "groupByFieldsForStatistics",
+									"value": "dag"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ongevallen provinciehuis",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gisserver.gelderland.nl/services/rest/services/Infra/InVkMo_Ongevallen_Archief/MapServer/0/query?where=1=1&geometryType=esriGeometryPoint&f=geojson&geometryPrecision=4&geometry=5.9098, 51.9771&inSR=4326&distance=1000&units=esriSRUnit_Meter",
+							"protocol": "https",
+							"host": [
+								"gisserver",
+								"gelderland",
+								"nl"
+							],
+							"path": [
+								"services",
+								"rest",
+								"services",
+								"Infra",
+								"InVkMo_Ongevallen_Archief",
+								"MapServer",
+								"0",
+								"query"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "1=1"
+								},
+								{
+									"key": "geometryType",
+									"value": "esriGeometryPoint"
+								},
+								{
+									"key": "f",
+									"value": "geojson"
+								},
+								{
+									"key": "geometryPrecision",
+									"value": "4"
+								},
+								{
+									"key": "geometry",
+									"value": "5.9098, 51.9771"
+								},
+								{
+									"key": "inSR",
+									"value": "4326"
+								},
+								{
+									"key": "distance",
+									"value": "1000"
+								},
+								{
+									"key": "units",
+									"value": "esriSRUnit_Meter"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PDOK Locatie Server",
+			"item": [
+				{
+					"name": "Zoeken op adres",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://geodata.nationaalgeoregister.nl/locatieserver/v3/free?q=Sint Jansstraat 4 Groningen",
+							"protocol": "https",
+							"host": [
+								"geodata",
+								"nationaalgeoregister",
+								"nl"
+							],
+							"path": [
+								"locatieserver",
+								"v3",
+								"free"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Sint Jansstraat 4 Groningen"
+								}
+							]
+						},
+						"description": "Vrij zoeken op adres."
+					},
+					"response": []
+				},
+				{
+					"name": "Zoeken op adres - beknopte zoekresultaten",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://geodata.nationaalgeoregister.nl/locatieserver/v3/free?q=Sint Jansstraat 4 Groningen&fl=weergavenaam, type&rows=5",
+							"protocol": "https",
+							"host": [
+								"geodata",
+								"nationaalgeoregister",
+								"nl"
+							],
+							"path": [
+								"locatieserver",
+								"v3",
+								"free"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Sint Jansstraat 4 Groningen"
+								},
+								{
+									"key": "fl",
+									"value": "weergavenaam, type"
+								},
+								{
+									"key": "rows",
+									"value": "5"
+								}
+							]
+						},
+						"description": "Zoeken op adres waarbij alleen de eerste vijf zoekresultaten geretourneerd worden en alleen de attributen weergavenaam en type in het zoekresultaat worden opgenomen."
+					},
+					"response": []
+				},
+				{
+					"name": "Zoeken op adressen in de BAG",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://geodata.nationaalgeoregister.nl/locatieserver/v3/free?q=Sint Jansstraat 4 Groningen&fl=weergavenaam, buurtnaam, wijknaam, gemeentenaam, provincienaam, type, score&fq=type:adres AND bron:BAG&rows=1",
+							"protocol": "https",
+							"host": [
+								"geodata",
+								"nationaalgeoregister",
+								"nl"
+							],
+							"path": [
+								"locatieserver",
+								"v3",
+								"free"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Sint Jansstraat 4 Groningen"
+								},
+								{
+									"key": "fl",
+									"value": "weergavenaam, buurtnaam, wijknaam, gemeentenaam, provincienaam, type, score"
+								},
+								{
+									"key": "fq",
+									"value": "type:adres AND bron:BAG"
+								},
+								{
+									"key": "rows",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Zoeken op adressen in de BAG."
+					},
+					"response": []
+				},
+				{
+					"name": "Geometrie van een adres",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://geodata.nationaalgeoregister.nl/locatieserver/v3/free?q=Sint Jansstraat 4 Groningen&fl=weergavenaam, centroide_ll, centroide_rd, type&fq=type:adres AND bron:BAG&rows=1",
+							"protocol": "https",
+							"host": [
+								"geodata",
+								"nationaalgeoregister",
+								"nl"
+							],
+							"path": [
+								"locatieserver",
+								"v3",
+								"free"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Sint Jansstraat 4 Groningen"
+								},
+								{
+									"key": "fl",
+									"value": "weergavenaam, centroide_ll, centroide_rd, type"
+								},
+								{
+									"key": "fq",
+									"value": "type:adres AND bron:BAG"
+								},
+								{
+									"key": "rows",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Locatie van een adres in WGS84 en RD New coördinatenstelsel."
+					},
+					"response": []
+				},
+				{
+					"name": "Geometrie van een weg",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://geodata.nationaalgeoregister.nl/locatieserver/v3/free?q=Sint Jansstraat Groningen&fl=weergavenaam, centroide_ll, centroide_rd, geometrie_ll, geometrie_rd,  type&fq=type:weg&rows=1",
+							"protocol": "https",
+							"host": [
+								"geodata",
+								"nationaalgeoregister",
+								"nl"
+							],
+							"path": [
+								"locatieserver",
+								"v3",
+								"free"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Sint Jansstraat Groningen"
+								},
+								{
+									"key": "fl",
+									"value": "weergavenaam, centroide_ll, centroide_rd, geometrie_ll, geometrie_rd,  type"
+								},
+								{
+									"key": "fq",
+									"value": "type:weg"
+								},
+								{
+									"key": "rows",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Geometrie van een weg. Punten (centroïden) en lijnen."
+					},
+					"response": []
+				},
+				{
+					"name": "Zoekresultaten zonder exacte match",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://geodata.nationaalgeoregister.nl/locatieserver/v3/free?q=St Jansstr 4 Groningen&fq=type:adres&rows=1",
+							"protocol": "https",
+							"host": [
+								"geodata",
+								"nationaalgeoregister",
+								"nl"
+							],
+							"path": [
+								"locatieserver",
+								"v3",
+								"free"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "St Jansstr 4 Groningen"
+								},
+								{
+									"key": "fq",
+									"value": "type:adres"
+								},
+								{
+									"key": "rows",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Zoeken op een adres zonder exacte match in de BAG."
+					},
+					"response": []
+				},
+				{
+					"name": "Zoeken op basis van postcode en huisnummer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://geodata.nationaalgeoregister.nl/locatieserver/v3/free?q=9712JN 4&fl=*&fq=type:adres&rows=1",
+							"protocol": "https",
+							"host": [
+								"geodata",
+								"nationaalgeoregister",
+								"nl"
+							],
+							"path": [
+								"locatieserver",
+								"v3",
+								"free"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "9712JN 4"
+								},
+								{
+									"key": "fl",
+									"value": "*"
+								},
+								{
+									"key": "fq",
+									"value": "type:adres"
+								},
+								{
+									"key": "rows",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Zoeken naar een adres op basis van postcode en huisnummer."
+					},
+					"response": []
+				},
+				{
+					"name": "Zoeken binnen één provincie",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://geodata.nationaalgeoregister.nl/locatieserver/v3/free?q=Sint Jansstraat AND provincienaam:Gelderland&fl=weergavenaam, type, provincienaam, score&fq=type:weg&rows=1",
+							"protocol": "https",
+							"host": [
+								"geodata",
+								"nationaalgeoregister",
+								"nl"
+							],
+							"path": [
+								"locatieserver",
+								"v3",
+								"free"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Sint Jansstraat AND provincienaam:Gelderland"
+								},
+								{
+									"key": "fl",
+									"value": "weergavenaam, type, provincienaam, score"
+								},
+								{
+									"key": "fq",
+									"value": "type:weg"
+								},
+								{
+									"key": "rows",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Niet zoeken binnen heel Nederland, maar binnen een specifieke provincie."
+					},
+					"response": []
+				},
+				{
+					"name": "Zoeken binnen één provincie - met aanhalingstekens",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://geodata.nationaalgeoregister.nl/locatieserver/v3/free?q=Sint Jansstraat AND provincienaam:\"Gelderland\" &fl=weergavenaam, type, provincienaam, score&fq=type:weg&rows=1",
+							"protocol": "https",
+							"host": [
+								"geodata",
+								"nationaalgeoregister",
+								"nl"
+							],
+							"path": [
+								"locatieserver",
+								"v3",
+								"free"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Sint Jansstraat AND provincienaam:\"Gelderland\" "
+								},
+								{
+									"key": "fl",
+									"value": "weergavenaam, type, provincienaam, score"
+								},
+								{
+									"key": "fq",
+									"value": "type:weg"
+								},
+								{
+									"key": "rows",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Zoeken binnen één provincie. "
+					},
+					"response": []
+				},
+				{
+					"name": "Zoeken naar woonplaats",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://geodata.nationaalgeoregister.nl/locatieserver/v3/free?q=woonplaatsnaam:Winsum&fl=weergavenaam, type, provincienaam&fq=type:woonplaats",
+							"protocol": "https",
+							"host": [
+								"geodata",
+								"nationaalgeoregister",
+								"nl"
+							],
+							"path": [
+								"locatieserver",
+								"v3",
+								"free"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "woonplaatsnaam:Winsum"
+								},
+								{
+									"key": "fl",
+									"value": "weergavenaam, type, provincienaam"
+								},
+								{
+									"key": "fq",
+									"value": "type:woonplaats"
+								}
+							]
+						},
+						"description": "Zoeken naar woonplaats 'Winsum'."
+					},
+					"response": []
+				},
+				{
+					"name": "Zoeken met behulp van synoniemen",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://geodata.nationaalgeoregister.nl/locatieserver/v3/free?q=woonplaatsnaam:Den Bosch&fl=weergavenaam, type&fq=type:woonplaats",
+							"protocol": "https",
+							"host": [
+								"geodata",
+								"nationaalgeoregister",
+								"nl"
+							],
+							"path": [
+								"locatieserver",
+								"v3",
+								"free"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "woonplaatsnaam:Den Bosch"
+								},
+								{
+									"key": "fl",
+									"value": "weergavenaam, type"
+								},
+								{
+									"key": "fq",
+									"value": "type:woonplaats"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Zoeken naar Zuid-Hollandplein 1 Den Haag",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://geodata.nationaalgeoregister.nl/locatieserver/v3/free?q=straatnaam=\"Zuid-Hollandplein\" AND huis_nlt=1 AND woonplaatsnaam:\"Den Haag\"&fl=weergavenaam, type, woonplaatscode, centroide_ll&fq=type:adres",
+							"protocol": "https",
+							"host": [
+								"geodata",
+								"nationaalgeoregister",
+								"nl"
+							],
+							"path": [
+								"locatieserver",
+								"v3",
+								"free"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "straatnaam=\"Zuid-Hollandplein\" AND huis_nlt=1 AND woonplaatsnaam:\"Den Haag\""
+								},
+								{
+									"key": "fl",
+									"value": "weergavenaam, type, woonplaatscode, centroide_ll"
+								},
+								{
+									"key": "fq",
+									"value": "type:adres"
+								}
+							]
+						},
+						"description": "Zoeken naar woonplaatscode en coördinaten van Zuid-Hollandplein 1 Den Haag."
+					},
+					"response": []
+				},
+				{
+					"name": "Dichtsbijzijnde hectometerpaal 53.196551 | Lengtegraad: 6.524544",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://geodata.nationaalgeoregister.nl/locatieserver/v3/free?fq=type:hectometerpaal&lat=53.197&lon=6.525&fl=bron, hectometernummer, wegnummer, weergavenaam&rows=1",
+							"protocol": "https",
+							"host": [
+								"geodata",
+								"nationaalgeoregister",
+								"nl"
+							],
+							"path": [
+								"locatieserver",
+								"v3",
+								"free"
+							],
+							"query": [
+								{
+									"key": "fq",
+									"value": "type:hectometerpaal"
+								},
+								{
+									"key": "lat",
+									"value": "53.197"
+								},
+								{
+									"key": "lon",
+									"value": "6.525"
+								},
+								{
+									"key": "fl",
+									"value": "bron, hectometernummer, wegnummer, weergavenaam"
+								},
+								{
+									"key": "rows",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Wegen rondom het Binnenhof",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://geodata.nationaalgeoregister.nl/locatieserver/v3/free?fl=weergavenaam&fq=bron:NWB and type:weg&lat=52.080&lon=4.313",
+							"protocol": "https",
+							"host": [
+								"geodata",
+								"nationaalgeoregister",
+								"nl"
+							],
+							"path": [
+								"locatieserver",
+								"v3",
+								"free"
+							],
+							"query": [
+								{
+									"key": "fl",
+									"value": "weergavenaam"
+								},
+								{
+									"key": "fq",
+									"value": "bron:NWB and type:weg"
+								},
+								{
+									"key": "lat",
+									"value": "52.080"
+								},
+								{
+									"key": "lon",
+									"value": "4.313"
+								}
+							]
+						},
+						"description": "De tien wegen die het dichtst bij het Binnenhof liggen."
+					},
+					"response": []
+				},
+				{
+					"name": "Suggesties bij zoeken naar een adres",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://geodata.nationaalgeoregister.nl/locatieserver/v3/suggest?q=Jan&fq=type:adres",
+							"protocol": "https",
+							"host": [
+								"geodata",
+								"nationaalgeoregister",
+								"nl"
+							],
+							"path": [
+								"locatieserver",
+								"v3",
+								"suggest"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Jan"
+								},
+								{
+									"key": "fq",
+									"value": "type:adres"
+								}
+							]
+						},
+						"description": "Suggesties bij het zoeken naar een adres."
+					},
+					"response": []
+				},
+				{
+					"name": "Suggesties bij het zoeken naar een adres binnen de stad Groningen",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://geodata.nationaalgeoregister.nl/locatieserver/v3/suggest?q=Sint Jan 4 AND woonplaatsnaam:Groningen&fq=type:adres",
+							"protocol": "https",
+							"host": [
+								"geodata",
+								"nationaalgeoregister",
+								"nl"
+							],
+							"path": [
+								"locatieserver",
+								"v3",
+								"suggest"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Sint Jan 4 AND woonplaatsnaam:Groningen"
+								},
+								{
+									"key": "fq",
+									"value": "type:adres"
+								}
+							]
+						},
+						"description": "Suggesties bij het zoeken naar een adres binnen de stad Groningen."
+					},
+					"response": []
+				},
+				{
+					"name": "Detailinformatie van een adres",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://geodata.nationaalgeoregister.nl/locatieserver/v3/lookup?id=adr-ddd2067f9f58de177db654e421cee64c",
+							"protocol": "https",
+							"host": [
+								"geodata",
+								"nationaalgeoregister",
+								"nl"
+							],
+							"path": [
+								"locatieserver",
+								"v3",
+								"lookup"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "adr-ddd2067f9f58de177db654e421cee64c"
+								}
+							]
+						},
+						"description": "Opvragen van detailinformatie over en adres via de LocatieServer lookup service."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PDOK REST API",
+			"item": []
+		},
+		{
+			"name": "CKAN API",
+			"item": []
+		}
+	]
+}
