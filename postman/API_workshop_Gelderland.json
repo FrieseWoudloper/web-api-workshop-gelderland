@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "b67ea93d-3942-4d21-a3e3-ca5f4808a171",
+		"_postman_id": "feba2d41-920e-4a1f-8d59-9b5280044e47",
 		"name": "API workshop Gelderland",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -9,12 +9,12 @@
 			"name": "Landbouw",
 			"item": [
 				{
-					"name": "Landbouw REST API ",
+					"name": "Gegevens van eerste 25 stallen in dataset",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://gisserver.gelderland.nl/services/rest/services/Landbouw/Lb_Veehouderij_emissiepunt/MapServer/0/query?where=1=1&outFields=*&f=geojson&geometryPrecision=5",
+							"raw": "https://gisserver.gelderland.nl/services/rest/services/Landbouw/Lb_Veehouderij_emissiepunt/MapServer/0/query?where=1=1&outFields=*&geometryPrecision=5&resultRecordCount=25&f=geojson",
 							"protocol": "https",
 							"host": [
 								"gisserver",
@@ -41,12 +41,16 @@
 									"value": "*"
 								},
 								{
-									"key": "f",
-									"value": "geojson"
-								},
-								{
 									"key": "geometryPrecision",
 									"value": "5"
+								},
+								{
+									"key": "resultRecordCount",
+									"value": "25"
+								},
+								{
+									"key": "f",
+									"value": "geojson"
 								}
 							]
 						},
@@ -55,7 +59,7 @@
 					"response": []
 				},
 				{
-					"name": "Informatie per stal",
+					"name": "Gegevens per stal",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -397,7 +401,7 @@
 					"response": []
 				}
 			],
-			"protocolProfileBehavior": {}
+			"protocolProfileBehavior": []
 		},
 		{
 			"name": "Ongevallen Archief",
@@ -742,7 +746,7 @@
 					"response": []
 				}
 			],
-			"protocolProfileBehavior": {}
+			"protocolProfileBehavior": []
 		},
 		{
 			"name": "PDOK Locatie Server",
@@ -1387,7 +1391,7 @@
 					"response": []
 				}
 			],
-			"protocolProfileBehavior": {}
+			"protocolProfileBehavior": []
 		},
 		{
 			"name": "CKAN data.overheid.nl",
@@ -1577,7 +1581,7 @@
 					"response": []
 				}
 			],
-			"protocolProfileBehavior": {}
+			"protocolProfileBehavior": []
 		},
 		{
 			"name": "NotuBiz",
@@ -1879,8 +1883,8 @@
 					"response": []
 				}
 			],
-			"protocolProfileBehavior": {}
+			"protocolProfileBehavior": []
 		}
 	],
-	"protocolProfileBehavior": {}
+	"protocolProfileBehavior": []
 }
