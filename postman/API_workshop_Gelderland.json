@@ -401,7 +401,7 @@
 					"response": []
 				}
 			],
-			"protocolProfileBehavior": []
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "Ongevallen Archief",
@@ -746,7 +746,7 @@
 					"response": []
 				}
 			],
-			"protocolProfileBehavior": []
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "PDOK Locatie Server",
@@ -1391,7 +1391,7 @@
 					"response": []
 				}
 			],
-			"protocolProfileBehavior": []
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "CKAN data.overheid.nl",
@@ -1581,7 +1581,7 @@
 					"response": []
 				}
 			],
-			"protocolProfileBehavior": []
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "NotuBiz",
@@ -1881,10 +1881,248 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Flevoland",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.notubiz.nl/organisations/2163/gremia?format=json",
+							"protocol": "https",
+							"host": [
+								"api",
+								"notubiz",
+								"nl"
+							],
+							"path": [
+								"organisations",
+								"2163",
+								"gremia"
+							],
+							"query": [
+								{
+									"key": "format",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Integrale Statencommissie Flevoland",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.notubiz.nl/organisations/2163/gremia/7760?format=json",
+							"protocol": "https",
+							"host": [
+								"api",
+								"notubiz",
+								"nl"
+							],
+							"path": [
+								"organisations",
+								"2163",
+								"gremia",
+								"7760"
+							],
+							"query": [
+								{
+									"key": "format",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vergaderingen Integrale Statencommissie in 2019",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.notubiz.nl/events?organisation_id=2163&gremia_ids%5B%5D=7760&date_from=2019-01-01%2000:00:00&date_to=2020-01-01%2000:00:00&format=json&version=1.10.8&page=1",
+							"protocol": "https",
+							"host": [
+								"api",
+								"notubiz",
+								"nl"
+							],
+							"path": [
+								"events"
+							],
+							"query": [
+								{
+									"key": "organisation_id",
+									"value": "2163"
+								},
+								{
+									"key": "gremia_ids%5B%5D",
+									"value": "7760"
+								},
+								{
+									"key": "date_from",
+									"value": "2019-01-01%2000:00:00"
+								},
+								{
+									"key": "date_to",
+									"value": "2020-01-01%2000:00:00"
+								},
+								{
+									"key": "format",
+									"value": "json"
+								},
+								{
+									"key": "version",
+									"value": "1.10.8"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Organen (decision making unit) van Flevoland",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://stateninformatie.flevoland.nl/api/v2/dmus?id=1",
+							"protocol": "https",
+							"host": [
+								"stateninformatie",
+								"flevoland",
+								"nl"
+							],
+							"path": [
+								"api",
+								"v2",
+								"dmus"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vergaderingen van organen van Flevoland op 18 september 2019",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://stateninformatie.flevoland.nl/api/v2/dmus/1/meetings?date=20190918",
+							"protocol": "https",
+							"host": [
+								"stateninformatie",
+								"flevoland",
+								"nl"
+							],
+							"path": [
+								"api",
+								"v2",
+								"dmus",
+								"1",
+								"meetings"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "20190918"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agendapunten van de PS vergadering op 18 september 2019",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://stateninformatie.flevoland.nl/api/v2/meetings/12538/meetingitems",
+							"protocol": "https",
+							"host": [
+								"stateninformatie",
+								"flevoland",
+								"nl"
+							],
+							"path": [
+								"api",
+								"v2",
+								"meetings",
+								"12538",
+								"meetingitems"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Documenten van de PS vergadering op 18 september 2019",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://stateninformatie.flevoland.nl/api/v2/meetings/12538/documents",
+							"protocol": "https",
+							"host": [
+								"stateninformatie",
+								"flevoland",
+								"nl"
+							],
+							"path": [
+								"api",
+								"v2",
+								"meetings",
+								"12538",
+								"documents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Uitnodiging voor de PS vergadering op 18 september 2019",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://stateninformatie.flevoland.nl/api/v2/documents/2078/download",
+							"protocol": "https",
+							"host": [
+								"stateninformatie",
+								"flevoland",
+								"nl"
+							],
+							"path": [
+								"api",
+								"v2",
+								"documents",
+								"2078",
+								"download"
+							]
+						},
+						"description": "Let op: het PDF-document dat dit request terug geeft kan Postman niet weergeven! Voer het request uit in de browser."
+					},
+					"response": []
 				}
 			],
-			"protocolProfileBehavior": []
+			"protocolProfileBehavior": {}
 		}
 	],
-	"protocolProfileBehavior": []
+	"protocolProfileBehavior": {}
 }
